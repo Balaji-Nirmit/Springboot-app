@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  # [cite_start]Dual MongoDB Configuration [cite: 44]
+  data:
+    mongodb:
+      # [cite_start]1. Logs Database (Primary) - High-volume logs [cite: 46]
+      logs:
+        uri: mongodb://localhost:27017/logs_db
+      # [cite_start]2. Metadata Database (Secondary) - Low-volume, consistent data (Issues, Alerts, Users) [cite: 50]
+      metadata:
+        uri: mongodb://localhost:27017/metadata_db
+
+# [cite_start]JWT Configuration [cite: 7]
+jwt:
+  secret: # Replace with a strong, base64-encoded secret key (e.g., 32 characters or more)
+  expiration: 3600000 # 1 hour

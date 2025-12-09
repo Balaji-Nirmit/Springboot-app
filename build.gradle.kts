@@ -35,6 +35,8 @@ dependencies {
 	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	// Config properties for rate limiter
+    implementation("org.springframework.boot:spring-boot-configuration-processor")
 
 	compileOnly("jakarta.servlet:jakarta.servlet-api:6.1.0")
 	implementation("io.jsonwebtoken:jjwt-api:0.12.6")
